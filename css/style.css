@@ -37,6 +37,10 @@
 
 /* General styles */
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background: var(--clr-light);
     color: var(--clr-dark);
@@ -139,6 +143,8 @@ header{
     max-width: 100px
 }
 
+/* nav */
+
 .nav{
     position: fixed;
     background: var(--clr-dark);
@@ -186,6 +192,27 @@ header{
     z-index: 1000;
     
 }
+
+.nav-open .nav{
+    transform: translateX(0);
+}
+
+.nav-open .nav-toggle{
+    position: fixed;
+}
+
+.nav-open .hamburger{
+    transform: rotate(.625turn)
+}
+
+.nav-open .hamburger::before{
+    transform: rotate(90deg) translateX(-6px);
+}
+.nav-open .hamburger::after{
+    opacity: 0;
+}
+
+/* hamburger */
 
 .hamburger{
     display: block;
