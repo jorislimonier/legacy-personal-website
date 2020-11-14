@@ -1,3 +1,7 @@
 # Portfolio Website
 
-Under construction...
+## TODO:
+- Remove latin text
+- Get good pictures
+- Personnalize website
+- Upload projects
