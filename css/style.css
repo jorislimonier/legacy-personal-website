@@ -26,8 +26,8 @@
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
 
-    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
-          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+    --bs: 0.25em 0.25em 0.5em rgba(25, 180, 180, 0.5),
+          0.125em 0.125em 0.25em rgba(25, 180, 180, 0.15);
 }
 
 @media (min-width: 800px) {
@@ -273,18 +273,18 @@ header{
         margin: 0 auto;
         grid-column-gap: 1em;
         grid-template-areas:
-            "img title"
-            "img subtitle";
+        "img title"
+        "img subtitle";
         grid-template-columns: min-content max-content;
     }
-
+    
     .intro__img{
         grid-area: img;
         min-width: 250px;
         position: relative;
         z-index: 2;
     }
-
+    
     .section__subtitle--intro{
         align-self: start;
         grid-column: -1 / 1;
@@ -299,10 +299,12 @@ header{
 /* MY SERVICES SECTION */
 
 .my-services {
-    background-color: var(--clr-dark);
+    background-color: rgba(0, 0, 0, 0.5);
     background-image: url(../img/mars_terraforming.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     background-blend-mode: multiply;
+    background-position: 0% 30%;
     color: var(--clr-light);
     text-align: center;
 }
@@ -341,7 +343,7 @@ header{
         margin-right: auto;
         background-image: none;
     }
-
+    
     .service + .service{
         margin-left: 2em;
     }
@@ -363,16 +365,16 @@ header{
         display: grid;
         grid-template-columns: 1fr 200px;
         grid-template-areas:
-            "title img"
-            "subtitle img"
-            "text img";
+        "title img"
+        "subtitle img"
+        "text img";
         grid-column-gap: 2em;
     }
-
+    
     .section__title--about{
         grid-area: title;
     }
-
+    
     .section__subtitle--about{
         grid-column: 1/ -1;
         grid-row: 2;
@@ -382,7 +384,7 @@ header{
         padding-left: 1em;
         padding-right: calc(200px + 4em);
     }
-
+    
     .about-me__img{
         grid-area: img;
         position: relative;
@@ -396,26 +398,25 @@ header{
     background-color: var(--clr-light);
     color: var(--clr-light);
     text-align: center;
-    /* padding-left: 4em;
-    padding-right: 4em; */
 }
 
 .portfolio{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding-left: 4em;
+    padding-right: 4em;
 }
 
 .portfolio__item{
     background: var(--clr-light);
     overflow: hidden;
+    /* padding: .25em */
 }
 
 .portfolio__img{
     transition:
-        transform 750ms cubic-bezier(.5, 0, .5, 1),
-        opacity 250ms linear;
-        /* margin-left: auto;
-        margin-right: auto; */
+    transform 750ms cubic-bezier(.5, 0, .5, 1),
+    opacity 250ms linear;
 }
 
 .portfolio__item:focus{
@@ -470,17 +471,43 @@ header{
     padding: .5em;
 }
 
+/* PORTFOLIO ITEM INDIVIDUAL */
+
 .portfolio-item-individual{
     padding: 0 2em 2em;
-    max-width: 1000px;
-    margin: 0 auto
+    margin: 0 auto;
+    
 }
 
+/* .portfolio-item-individual img, */
+.portfolio-item-individual ol,
 .portfolio-item-individual p{
-    max-width: 600px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
+
+/* .portfolio-item-individual img{
+    scale: 0.2;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.95;
+    padding: .5em
+} */
+
+.backpropagation__image{
+    background-color: var(--clr-dark);
+    padding: .25em .75em .25em .75em;
+    box-shadow: var(--bs);
+    max-width: 500px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 500px; */
+
+}
+
+
 
 
 
