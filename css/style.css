@@ -13,10 +13,6 @@
     --fw-reg: 300;
     --fw-bold: 900;
 
-    /* --clr-light: #fff;
-    --clr-dark: #303030;
-    --clr-accent: #16e0bd; */
-    
     --clr-light: #0a0a0a;
     --clr-dark: #fff;
     --clr-accent: #19b4b4;
@@ -26,8 +22,10 @@
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
 
-    --bs: 0.25em 0.25em 0.75em rgba(25, 180, 180, 0.5),
+    --bs: 0.25em 0.25em 0.15em rgba(25, 180, 180, 0.35),
           0.125em 0.125em 0.25em rgba(25, 180, 180, 0.15);
+
+    --grid-border: 2px;
 }
 
 @media (min-width: 800px) {
@@ -228,7 +226,9 @@ header{
 
 .hamburger{
     display: block;
-    position: relative
+    position: relative;
+    margin-right: .25em;
+    margin-top: .5em
 }
 
 .hamburger,
@@ -250,8 +250,8 @@ header{
     right: 0;
 }
 
-.hamburger::before{top: 6px;}
-.hamburger::after{bottom: 6px;}
+.hamburger::before{top: 7px;}
+.hamburger::after{bottom: 7px;}
 
 
 
@@ -406,21 +406,25 @@ header{
 
 .portfolio{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding-left: 4em;
-    padding-right: 4em;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-left: 4em;
+    margin-right: 4em;
+    border: var(--grid-border) solid var(--clr-accent);
 }
 
 .portfolio__item{
-    background: var(--clr-light);
+    background: var(--clr-accent);
     overflow: hidden;
-    /* padding: .25em */
+    border-left: var(--grid-border) solid var(--clr-accent);
+    border-right: var(--grid-border) solid var(--clr-accent)
 }
 
 .portfolio__img{
     transition:
     transform 750ms cubic-bezier(.5, 0, .5, 1),
     opacity 250ms linear;
+    object-fit: contain;
+    /* padding: .5em; */
 }
 
 .portfolio__item:focus{
@@ -452,6 +456,7 @@ header{
 
 .footer__link{
     font-weight: var(--fw-bold);
+    letter-spacing: .05em;
 }
 
 .footer__link:hover,
@@ -483,7 +488,6 @@ header{
     
 }
 
-/* .portfolio-item-individual img, */
 .portfolio-item-individual ol,
 .portfolio-item-individual p{
     max-width: 800px;
@@ -507,10 +511,15 @@ header{
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    /* width: 500px; */
-
+    margin-top: 2em;
+    margin-bottom: .75em;
 }
 
+.image__caption{
+    text-align: center;
+
+
+}
 
 
 
