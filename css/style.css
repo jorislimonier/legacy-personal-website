@@ -25,7 +25,7 @@
     --bs: 0.25em 0.25em 0.15em rgba(25, 180, 180, 0.35),
           0.125em 0.125em 0.25em rgba(25, 180, 180, 0.15);
 
-    --grid-border: 2px;
+    --grid-border: .5px;
 }
 
 @media (min-width: 800px) {
@@ -411,14 +411,13 @@ header{
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     margin-left: 4em;
     margin-right: 4em;
-    border: var(--grid-border) solid var(--clr-accent);
+    /* border: var(--grid-border) solid var(--clr-accent); */
 }
 
 .portfolio__item{
     background: var(--clr-accent);
     overflow: hidden;
-    border-left: var(--grid-border) solid var(--clr-accent);
-    border-right: var(--grid-border) solid var(--clr-accent)
+    border: var(--grid-border) solid black;
 }
 
 .portfolio__img{
