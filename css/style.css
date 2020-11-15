@@ -200,7 +200,10 @@ header{
     right: 1em;
     top: 1em;
     z-index: 1000;
-    
+}
+
+.nav-toggle:focus{
+    outline-offset: 5px;
 }
 
 .nav-open .nav{
@@ -216,7 +219,7 @@ header{
 }
 
 .nav-open .hamburger::before{
-    transform: rotate(90deg) translateX(-6px);
+    transform: rotate(90deg) translateX(-6.3px);
 }
 .nav-open .hamburger::after{
     opacity: 0;
@@ -240,7 +243,6 @@ header{
     border-radius: 1em;
     transition: transform 250ms ease-in-out;
 }
-
 
 .hamburger::before,
 .hamburger::after{
