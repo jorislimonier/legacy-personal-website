@@ -13,8 +13,8 @@
     --fw-reg: 300;
     --fw-bold: 900;
 
-    --clr-light: #0a0a0a;
-    --clr-dark: #fff;
+    --clr-dark: #0a0a0a;
+    --clr-light: #fff;
     --clr-accent: #19b4b4;
 
     --fs-h1: 3rem;
@@ -44,8 +44,8 @@ html{
 }
 
 body{
-    background: var(--clr-light);
-    color: var(--clr-dark);
+    background: var(--clr-dark);
+    color: var(--clr-light);
     margin: 0;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
@@ -74,7 +74,7 @@ strong{font-weight: var(--fw-bold)}
     display: inline-block;
     padding: .5em 2.5em;
     background: var(--clr-accent);
-    color: var(--clr-dark);
+    color: var(--clr-light);
     text-decoration: none;
     cursor: pointer;
     font-size: .8rem;
@@ -149,7 +149,7 @@ header{
     display: block;
     font-family: var(--ff-secondary);
     font-size: 20px;
-    color: var(--clr-dark);
+    color: var(--clr-light);
     transform: scaleY(1.2);
 }
 
@@ -157,8 +157,8 @@ header{
 
 .nav{
     position: fixed;
-    background: var(--clr-dark);
-    color: var(--clr-light);
+    background: var(--clr-light);
+    color: var(--clr-dark);
     top: 0;
     bottom: 0;
     left: 0;
@@ -311,7 +311,7 @@ header{
     background-repeat: no-repeat;
     background-blend-mode: multiply;
     background-position: 0% 30%;
-    color: var(--clr-light);
+    color: var(--clr-dark);
     text-align: center;
 }
 
@@ -327,7 +327,7 @@ header{
     width: 2em;
     height: 1px;
     margin: 0.5em auto 1em;
-    background: var(--clr-light);
+    background: var(--clr-dark);
     opacity: 0.25;
 }
 
@@ -338,7 +338,7 @@ header{
 .service{
     max-width: 500px;
     margin: 0 auto;
-    color: var(--clr-dark)
+    color: var(--clr-light)
 }
 
 @media (min-width: 800px) {
@@ -364,6 +364,12 @@ header{
 
 .about-me__img{
     box-shadow: var(--bs);
+}
+
+.about-me a{
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold)
+    
 }
 
 @media (min-width: 600px){
@@ -401,7 +407,7 @@ header{
 /* MY WORK */
 
 .my-work{
-    background-color: var(--clr-light);
+    background-color: var(--clr-dark);
     color: var(--clr-light);
     text-align: center;
 }
@@ -509,7 +515,7 @@ header{
 } */
 
 .backpropagation__image{
-    background-color: var(--clr-dark);
+    background-color: var(--clr-light);
     padding: .25em .75em .25em .75em;
     box-shadow: var(--bs);
     max-width: 500px;
