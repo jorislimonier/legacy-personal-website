@@ -302,58 +302,6 @@ header{
     }
 }
 
-/* MY SERVICES SECTION */
-/* 
-.my-services {
-    background-color: rgba(0, 0, 0, 0.5);
-    background-image: url(../img/mars_terraforming.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
-    background-position: 0% 30%;
-    color: var(--clr-dark);
-    text-align: center;
-}
-
-
-.section__title--services{
-    color: var(--clr-accent);
-    position: relative;
-}
-
-.section__title--services::after{
-    content: '';
-    display: block;
-    width: 2em;
-    height: 1px;
-    margin: 0.5em auto 1em;
-    background: var(--clr-dark);
-    opacity: 0.25;
-}
-
-.services{
-    margin-bottom: 4em;
-}
-
-.service{
-    max-width: 500px;
-    margin: 0 auto;
-    color: var(--clr-light)
-}
-
-@media (min-width: 800px) {
-    .services {
-        display: flex;
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-        background-image: none;
-    }
-    
-    .service + .service{
-        margin-left: 2em;
-    }
-} */
 
 /* ABOUT ME */
 
