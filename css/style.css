@@ -303,7 +303,7 @@ header{
 }
 
 /* MY SERVICES SECTION */
-
+/* 
 .my-services {
     background-color: rgba(0, 0, 0, 0.5);
     background-image: url(../img/mars_terraforming.jpg);
@@ -353,7 +353,7 @@ header{
     .service + .service{
         margin-left: 2em;
     }
-}
+} */
 
 /* ABOUT ME */
 
