@@ -3,8 +3,4 @@
 
 
 
-## TODO:
-- Change from hamburger menu to tabs
-- Get good pictures
-- Personnalize website
-- Upload projects
+## TODO: Redesign website 2022
