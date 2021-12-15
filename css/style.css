@@ -112,15 +112,29 @@ nav {
 }
 
 .project-card {
-  background-color: rgb(52, 48, 66);
-  padding: 1px 20px;
+  padding: 1px 0px;
   border-radius: 10px;
   height: 200px;
+  background-color: rgb(52, 48, 66, 1);
 }
+
+.project-card__background-image {
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  position: absolute;
+  border-radius: 10px;
+}
+
 .project-card__link {
   margin: 0px 0px;
   text-decoration: none;
   display: block;
+  position: relative;
+}
+
+.project-card__title {
+  margin: 20px 20px 0px;
 }
 
 .project-card__content {
@@ -129,7 +143,8 @@ nav {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  padding: 0px 20px;
+  margin: 10px 30px;
+  position: relative;
 }
 
 /* About me */
@@ -168,7 +183,7 @@ nav {
   display: inline;
   font-weight: bold;
   vertical-align: middle;
-  letter-spacing: .05rem
+  letter-spacing: 0.05rem;
 }
 
 .fa-github,
