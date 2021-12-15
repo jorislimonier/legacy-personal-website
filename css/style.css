@@ -107,29 +107,32 @@ nav {
 .home__list {
   text-align: center;
   padding: 0;
+  margin: 0 0px 20px 0px;
   display: flex;
-  justify-content: space-between;
-  margin: 0px 20px 20px;
+  justify-content: space-evenly;
+  /* margin: 0px 20px 20px; */
 }
 .home__list-item {
   display: inline-block;
-  width: 30%;
   margin: 0px auto;
 }
 
 .home-description__list {
   list-style: none;
+  padding: 0;
+  align-items: left;
 }
 
 .home-description__list-item {
+  margin: 0px;
 }
 
 .home__profile-picture {
-  height: 600px;
+  height: 650px;
   width: 500px;
   object-fit: cover;
   object-position: 100% 100%;
-  margin: 0px;
+  margin-right: 0px;
 }
 
 /* Projects */

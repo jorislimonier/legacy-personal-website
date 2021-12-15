@@ -4,3 +4,4 @@
 
 
 ## TODO: Redesign website 2022
+- Fix spacing in home page
