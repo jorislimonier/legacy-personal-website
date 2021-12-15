@@ -41,6 +41,7 @@ body {
   font-size: var(--fs-body);
   line-height: 1.6;
   margin: 0 3%;
+  /* clear: both; */
 }
 
 strong {
@@ -82,8 +83,9 @@ nav {
 
 .section {
   border: 1px solid;
-  margin: 30px;
+  margin: 30px auto;
   padding: 0px 20px 20px;
+  max-width: 1200px;
 }
 
 .section__title {
@@ -102,6 +104,7 @@ nav {
 
 .about-me-table {
   margin-left: 30px;
+  width: 90%;
 }
 .about-me-table__row {
   margin-bottom: 20px;
@@ -115,4 +118,5 @@ nav {
   font-weight: 550;
   padding-right: 30px;
   white-space: nowrap;
+  width: 150px;
 }
