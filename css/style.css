@@ -13,9 +13,9 @@
   --fw-reg: 300;
   --fw-bold: 900;
 
-  --clr-dark: #13141ff1;
+  --clr-dark: rgba(15, 18, 36, 0.945);
   --clr-light: rgba(255, 255, 255, 0.897);
-  --clr-accent: #1d9595;
+  --clr-accent: #94b9b9;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -114,8 +114,8 @@ nav {
 .project-card {
   padding: 1px 0px;
   border-radius: 10px;
-  height: 200px;
-  background-color: rgb(52, 48, 66, 1);
+  height: 300px;
+  background-color: rgb(9, 8, 15);
 }
 
 .project-card__background-image {
@@ -134,16 +134,16 @@ nav {
 }
 
 .project-card__title {
-  margin: 20px 20px 0px;
+  margin: 20px 20px 30px;
 }
 
 .project-card__content {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
-  margin: 10px 30px;
+  margin: 10px 35px;
   position: relative;
 }
 
