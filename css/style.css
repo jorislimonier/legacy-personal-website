@@ -89,7 +89,7 @@ nav {
 }
 
 .section__title {
-  margin: 20px 0px 30px;
+  margin: 30px 0px 30px;
   color: var(--clr-accent);
   font-size: var(--fs-h1);
   text-align: center;
@@ -106,7 +106,7 @@ nav {
 .projects-grid {
   display: grid;
   gap: 20px;
-  padding: 20px;
+  padding: 0px 20px 20px;
   width: 100%;
   grid-template-columns: repeat(auto-fill, minmax(min(450px, 50%), 1fr));
 }
