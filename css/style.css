@@ -14,7 +14,7 @@
   --fw-bold: 900;
 
   --clr-dark: #13141ff1;
-  --clr-light: #fff;
+  --clr-light: rgba(255, 255, 255, 0.897);
   --clr-accent: #1d9595;
 
   --fs-h1: 3rem;
@@ -152,3 +152,37 @@ nav {
   white-space: nowrap;
   width: 150px;
 }
+
+/* Contact */
+
+.contact-sublist__link {
+  text-decoration: none;
+  color: var(--clr-light);
+}
+
+.contact-sublist__row {
+  margin: 50px;
+}
+
+.contact-sublist__item {
+  display: inline;
+  font-weight: bold;
+  vertical-align: middle;
+  letter-spacing: .05rem
+}
+
+.fa-github,
+.fa-linkedin,
+.fa-envelope {
+  color: var(--clr-accent);
+  width: 90px;
+  vertical-align: middle;
+}
+/* 
+.fa-linkedin {
+  color: var(--clr-accent);
+}
+
+.fa-envelope {
+  color: var(--clr-accent);
+} */
