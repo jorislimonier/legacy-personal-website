@@ -4,4 +4,4 @@
 
 
 ## TODO: Redesign website 2022
-- Fix spacing in home page
+- Blur project images to make text more readable
