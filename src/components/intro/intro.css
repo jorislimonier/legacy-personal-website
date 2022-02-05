@@ -45,7 +45,7 @@
 
 .intro-title-wrapper {
   height: 80%;
-  animation: move 10s ease-in-out infinite alternate;
+  animation: move 6s ease-in-out infinite alternate;
 }
 
 @keyframes move {
@@ -60,3 +60,8 @@
   }
 }
 
+.intro-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

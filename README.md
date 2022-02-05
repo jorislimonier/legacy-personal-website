@@ -3,5 +3,4 @@
 
 
 
-## TODO: Redesign website 2022
-- Blur project images to make text more readable
+Currently redesigning my portfolio website with ReactJS.
