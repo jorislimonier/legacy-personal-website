@@ -6,7 +6,6 @@ function App() {
     <div>
       <Navbar />
       <Home />
-      <h1 className="text-2xl font-bold">Hello</h1>
     </div>
   );
 }
