@@ -12,11 +12,12 @@ const Navbar = () => {
       <img src={Logo} alt="" style={{ width: "50px" }} />
       {/* menu */}
       <ul className="hidden md:flex">
-        <li>Home</li>
-        <li>About</li>
-        <li>Skills</li>
-        <li>Work</li>
-        <li>Contact</li>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/about">About</a>
+        </li>
       </ul>
       {/* Hamburger */}
       <div onClick={handleClick} className="md:hidden z-10">
@@ -30,11 +31,8 @@ const Navbar = () => {
             : "absolute top-0 left-0 w-full h-screen bg-[#0A192F] flex flex-col justify-center items-center"
         }
       >
-        <li className="py-6 text-4xl">Home</li>
-        <li className="py-6 text-4xl">About</li>
-        <li className="py-6 text-4xl">Skills</li>
-        <li className="py-6 text-4xl">Work</li>
-        <li className="py-6 text-4xl">Contact</li>
+        <li className="py-6 text-4xl"><a href="/">Home</a></li>
+        <li className="py-6 text-4xl"><a href="/about">About</a></li>
       </ul>
       {/* Social icons */}
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
