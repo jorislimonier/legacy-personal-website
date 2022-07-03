@@ -1,7 +1,7 @@
 import "./Home.scss";
 const Home = () => {
   return (
-    <div name="home" className="home">
+    <div className="home">
       {/* Container */}
       <div className="homepage-container">
         <div className="header-container">
@@ -19,7 +19,6 @@ const Home = () => {
             I am a mathematician with years of experience in the field of data
             science. My expertise is in Python, but I am also fluent in Julia.
           </p> */}
-          {/* <button>Hire me</button> */}
         </div>
       </div>
     </div>

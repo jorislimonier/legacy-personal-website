@@ -4,7 +4,7 @@
     width: 100%;
     // height: 200vh;
     background: #0a192f;
-    padding-bottom: 200px;
+    padding-bottom: 500px;
 }
 
 .homepage-container {
@@ -26,18 +26,23 @@
 
 .header-container {
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    
     position: relative;
-    height: 350px;
+    // height: 350px;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
 }
 
 
 .name {
-    margin: 20px 0;
+    // margin: auto 0;
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 700;
     color: #ccd6f6;
-    text-align: center;
 
     @media (min-width: 640px) {
         font-size: 4rem;
