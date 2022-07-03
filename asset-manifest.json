@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.4efc4670.css",
-    "main.js": "/static/js/main.e43f3cb0.js",
-    "static/media/logo.png": "/static/media/logo.7ed42caf1761f7568a18.png",
-    "index.html": "/index.html",
-    "main.4efc4670.css.map": "/static/css/main.4efc4670.css.map",
-    "main.e43f3cb0.js.map": "/static/js/main.e43f3cb0.js.map"
+    "main.css": "/jorislimonier.github.io/static/css/main.4efc4670.css",
+    "main.js": "/jorislimonier.github.io/static/js/main.f37a4824.js",
+    "static/media/logo.png": "/jorislimonier.github.io/static/media/logo.7ed42caf1761f7568a18.png",
+    "index.html": "/jorislimonier.github.io/index.html",
+    "main.4efc4670.css.map": "/jorislimonier.github.io/static/css/main.4efc4670.css.map",
+    "main.f37a4824.js.map": "/jorislimonier.github.io/static/js/main.f37a4824.js.map"
   },
   "entrypoints": [
     "static/css/main.4efc4670.css",
-    "static/js/main.e43f3cb0.js"
+    "static/js/main.f37a4824.js"
   ]
 }
