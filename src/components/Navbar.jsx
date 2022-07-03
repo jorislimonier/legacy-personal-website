@@ -31,8 +31,12 @@ const Navbar = () => {
             : "absolute top-0 left-0 w-full h-screen bg-[#0A192F] flex flex-col justify-center items-center"
         }
       >
-        <li className="py-6 text-4xl"><a href="/">Home</a></li>
-        <li className="py-6 text-4xl"><a href="/about">About</a></li>
+        <li className="py-6 text-4xl">
+          <a href="/">Home</a>
+        </li>
+        <li className="py-6 text-4xl">
+          <a href="/about">About</a>
+        </li>
       </ul>
       {/* Social icons */}
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
