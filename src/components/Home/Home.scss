@@ -1,0 +1,51 @@
+@use "variables"as *;
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background: #0a192f;
+}
+
+.container {
+    display: flex;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.greetings {
+    color: teal;
+    font-weight: 600;
+}
+
+.name {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: #ccd6f6;
+
+    @media (min-width: 640px) {
+        font-size: 4.5rem;
+        line-height: 1;
+    }
+}
+
+.role {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: #8892b0;
+
+    @media (min-width: 640px) {
+        font-size: 4.5rem;
+        line-height: 1;
+    }
+}
+
+.description {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #8892b0;
+}

@@ -1,0 +1,86 @@
+@use "variables"as *;
+
+.logo {
+    font-weight: 600;
+    font-size: x-large;
+    margin: 0 3rem;
+
+    &:hover {
+        color: $accent-color
+    }
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    color: #D1D5DB;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+
+.menu {
+    @media(min-width: $small) {
+        display: none;
+    }
+
+    @media(min-width: $md) {
+        display: flex;
+        margin: 0 2rem;
+        justify-content: space-around;
+    }
+}
+
+.menu-items {
+    @media(min-width: $md) {
+        margin: 0 1rem;
+        font-weight: 600;
+        font-size: x-large;
+
+        &:hover {
+            color: $accent-color
+        }
+    }
+}
+
+.menu--mobile {
+    @media (min-width: $md) {
+        display: none;
+    }
+
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #0A192F;
+}
+
+.menu-icon--mobile {
+    @media (min-width: $md) {
+        display: none;
+    }
+
+    z-index: 10;
+    margin: 0 1.8rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+
+    &:hover {
+        color: $accent-color;
+    }
+
+}
+
+.menu-items--mobile {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+
+}
