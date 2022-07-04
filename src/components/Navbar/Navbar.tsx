@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.scss";
+import FlagFrance from "../../assets/flag-france.svg";
+import FlagUK from "../../assets/flag-uk.svg";
+// import logo = require("../assets/flag-france.svg");
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -12,6 +15,10 @@ const Navbar = () => {
           Joris LIMONIER
         </a>
       </span>
+      <div className="flags-container">
+        <a href=""><img className="flag" src={FlagFrance} alt="" /></a>
+        <a href=""><img className="flag" src={FlagUK} alt="" /></a>
+      </div>
       {/* menu */}
       <ul className="menu">
         <li className="menu-items">
