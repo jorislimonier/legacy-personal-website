@@ -1,9 +1,17 @@
 @use "variables"as *;
 
+.flags-wrapper {
+    align-items: center;
+    padding: auto 0;
+}
+
 .logo {
     font-weight: 600;
     font-size: x-large;
     margin: 0 3rem;
+    text-align: center;
+    vertical-align: middle;
+
 
     &:hover {
         color: $accent-color
@@ -23,13 +31,12 @@
 }
 
 .flag {
-    width: 35px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     margin: 0 10px;
 
-
     &hover {
-        border: 3px solid white;
+        border: 3px solid red;
     }
 }
 
