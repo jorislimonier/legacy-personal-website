@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="flags-wrapper">
-        <span>
+        <span className="logo-wrapper">
           <a className="logo" href="/">
             Joris LIMONIER
           </a>
