@@ -33,7 +33,7 @@ i18next
       //   transKeepBasicHtmlNodesFor: ["br", "strong", "i"], // don't convert to <1></1> if simple react elements
       // },
     },
-    backend: { loadPath: "/locales/{{lng}}/translation.json" },
+    backend: { loadPath: "/assets/locales/{{lng}}/translation.json" },
     // interpolation: { escapeValue: true },
   });
 
