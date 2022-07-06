@@ -6,8 +6,8 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.scss";
 
 const languages = [
-  { code: "en", name: "English", country_code: "gb" },
-  { code: "fr", name: "Français", country_code: "fr" },
+  { code: "en", country_code: "gb" },
+  { code: "fr", country_code: "fr" },
 ]
 
 const Navbar = () => {
@@ -24,7 +24,7 @@ const Navbar = () => {
           </a>
         </span>
         {/* Iterate over language flags */}
-        {languages.map(({ code, name, country_code }) => (
+        {languages.map(({ code, country_code }) => (
           <button className="flag--button" key={country_code} onClick={() => i18next.changeLanguage(code)}>
             <span className={`flag fi fi-${country_code}`}>
             </span>
