@@ -37,7 +37,7 @@ const Navbar = () => {
           <a href="/">{t("home")}</a>
         </li>
         <li className="menu-items">
-          <a href="/about">{t("about")}</a>
+          <a href="/contact">{t("contact")}</a>
         </li>
       </ul>
 
@@ -48,12 +48,12 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       
-      <ul className={nav ? "menu__mobile--show" : "menu__mobile--hide"}>
+      <ul className={nav ? "menu__mobile" : "menu__mobile--hide"}>
         <li className="menu-items--mobile">
           <a href="/">Home</a>
         </li>
         <li className="menu-items--mobile">
-          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
         </li>
       </ul>
     </div>

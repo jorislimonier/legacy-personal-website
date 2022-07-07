@@ -19,7 +19,7 @@
 
 .navbar {
     display: flex;
-    position: fixed;
+    // position: fixed;
     color: #D1D5DB;
     justify-content: space-between;
     align-items: center;
@@ -79,7 +79,7 @@
     }
 }
 
-.menu__mobile--show {
+.menu__mobile {
     @media (min-width: $md) {
         display: none;
     }
@@ -94,10 +94,11 @@
     width: 100%;
     height: 100vh;
     background: #0A192F;
-}
 
-.menu__mobile--hide {
-    display: none;
+    &--hide {
+        @extend .menu__mobile;
+        display: none;
+    }
 }
 
 .menu-icon--mobile {
@@ -113,7 +114,7 @@
     &:hover {
         color: $accent-color;
     }
-    
+
 }
 
 .menu-items--mobile {
@@ -122,7 +123,7 @@
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 500;
-    
+
     &:hover {
         color: $accent-color;
     }

@@ -1,12 +1,20 @@
+import "./Contact.scss";
+import { FaGithub } from "react-icons/fa";
 
-const About = () => {
+const Contact = () => {
   return (
-    <div className="w-full h-screen bg-[#0a192f] text-gray-300">
-      <div className="flex flex-col justify-center items-center w-full h-full">
-        <div className="max-w-[1000px] w-full px-4 grid-cols-2 gap-8">
+    <div className="contact">
+      <div className="contact__page__container">
+        <h1 className="title">Contact</h1>
+        <ul className="contact__menu">
+          <li className="contact__menu__item">
+            <FaGithub /> Github
+          </li>
+        </ul>
+        {/* <div className="">
           <div className="sm:text-right pb-8 pl-4">
             <p className="text-4xl font-bold inline border-b-4 border-pink-600">
-              About
+              Contact
             </p>
             <div className="max-w-[1000px] w-full px-4 grid grid-cols-2 gap-8">
               <div>
@@ -16,10 +24,10 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
 };
 
-export default About;
+export default Contact;

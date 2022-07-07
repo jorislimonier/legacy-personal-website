@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 
 
 import "./Home.scss";
+
 const Home = () => {
   const { t } = useTranslation();
 
