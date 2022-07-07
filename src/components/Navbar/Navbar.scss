@@ -79,7 +79,7 @@
     }
 }
 
-.menu--mobile {
+.menu__mobile--show {
     @media (min-width: $md) {
         display: none;
     }
@@ -96,6 +96,10 @@
     background: #0A192F;
 }
 
+.menu__mobile--hide {
+    display: none;
+}
+
 .menu-icon--mobile {
     @media (min-width: $md) {
         display: none;
@@ -109,7 +113,7 @@
     &:hover {
         color: $accent-color;
     }
-
+    
 }
 
 .menu-items--mobile {
@@ -117,5 +121,9 @@
     padding-bottom: 1.5rem;
     font-size: 2.25rem;
     line-height: 2.5rem;
-
+    font-weight: 500;
+    
+    &:hover {
+        color: $accent-color;
+    }
 }

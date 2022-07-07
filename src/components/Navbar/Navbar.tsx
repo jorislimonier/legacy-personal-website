@@ -14,7 +14,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
   const { t } = useTranslation();
-
+  console.log(nav)
   return (
     <div className="navbar">
       <div className="flags-wrapper">
@@ -47,7 +47,8 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      <ul className={nav ? "menu--mobile" : "hidden"}>
+      
+      <ul className={nav ? "menu__mobile--show" : "menu__mobile--hide"}>
         <li className="menu-items--mobile">
           <a href="/">Home</a>
         </li>
