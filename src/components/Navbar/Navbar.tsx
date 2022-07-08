@@ -37,7 +37,7 @@ const Navbar = () => {
           <a href="/">{t("home")}</a>
         </li>
         <li className="menu-items">
-          <a href="/contact">{t("contact")}</a>
+          <a href="/#/contact">{t("contact")}</a>
         </li>
       </ul>
 

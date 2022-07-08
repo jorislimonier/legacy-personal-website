@@ -4,7 +4,7 @@ import HttpApi from "i18next-http-backend";
 import { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { initReactI18next } from "react-i18next";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 import App from "./App";
 import "./index.scss";
 
@@ -46,8 +46,8 @@ const loadingMarkup = (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Suspense fallback={loadingMarkup}>
-    <BrowserRouter>
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </Suspense>
 );

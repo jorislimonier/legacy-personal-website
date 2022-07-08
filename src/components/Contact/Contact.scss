@@ -14,5 +14,28 @@
     align-items: center;
     width: 100%;
     padding-top: 3rem;
-    // height: 100%;
+}
+
+.cards__container{
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: $accent-color;
+    margin: 1.5rem;
+    // padding: 4rem;
+    border-radius: 5%;
+    box-shadow: 5px 5px 12px 4px rgba(0,0,0,0.64);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 150px;
+    height: 100px;
+}
+
+.card__title{
+    font-size: 25px;
 }
