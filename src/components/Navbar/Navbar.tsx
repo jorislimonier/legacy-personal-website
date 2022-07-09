@@ -8,13 +8,13 @@ import "./Navbar.scss";
 const languages = [
   { code: "en", country_code: "gb" },
   { code: "fr", country_code: "fr" },
-]
+];
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
   const { t } = useTranslation();
-  console.log(nav)
+  console.log(nav);
   return (
     <div className="navbar">
       <div className="flags-wrapper">
@@ -25,9 +25,12 @@ const Navbar = () => {
         </span>
         {/* Iterate over language flags */}
         {languages.map(({ code, country_code }) => (
-          <button className="flag--button" key={country_code} onClick={() => i18next.changeLanguage(code)}>
-            <span className={`flag fi fi-${country_code}`}>
-            </span>
+          <button
+            className="flag--button"
+            key={country_code}
+            onClick={() => i18next.changeLanguage(code)}
+          >
+            <span className={`flag fi fi-${country_code}`}></span>
           </button>
         ))}
       </div>
@@ -35,6 +38,9 @@ const Navbar = () => {
       <ul className="menu">
         <li className="menu-items">
           <a href="/">{t("home")}</a>
+        </li>
+        <li className="menu-items">
+          <a href="/#/projects">{t("projects")}</a>
         </li>
         <li className="menu-items">
           <a href="/#/contact">{t("contact")}</a>
@@ -47,13 +53,13 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      
+
       <ul className={nav ? "menu__mobile" : "menu__mobile--hide"}>
         <li className="menu-items--mobile">
-          <a href="/">Home</a>
+          <a href="/">{t("home")}</a>
         </li>
         <li className="menu-items--mobile">
-          <a href="/contact">Contact</a>
+          <a href="/contact">{t("contact")}</a>
         </li>
       </ul>
     </div>

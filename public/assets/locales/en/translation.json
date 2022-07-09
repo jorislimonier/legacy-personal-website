@@ -1,6 +1,9 @@
 {
   "home": "Home",
   "contact": "Contact",
+  "projects": "Projects",
   "role1": "Freelance Data Scientist",
-  "role2": "Python & Machine Learning Expert"
+  "role2": "Python & Machine Learning Expert",
+
+  "contact_enquiries": "For questions and enquiries, please contact me at: "
 }

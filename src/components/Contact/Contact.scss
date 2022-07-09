@@ -5,37 +5,59 @@
     width: 100%;
     height: 100vh;
     background: $background-color;
+
+    &__page__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 3rem;
+    }
 }
 
-.contact__page__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-top: 3rem;
-}
-
-.cards__container{
+.cards__container {
     margin-top: 2.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    &>a {
+        margin: 1rem;
+    }
 }
 
 .card {
-    background: $accent-color;
-    margin: 1.5rem;
-    // padding: 4rem;
+    background: #ac3434;
+    // margin: 1.5rem;
     border-radius: 5%;
-    box-shadow: 5px 5px 12px 4px rgba(0,0,0,0.64);
+    box-shadow: 5px 5px 12px 4px rgba(0, 0, 0, 0.64);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 150px;
+    width: 180px;
     height: 100px;
+
+    &__title {
+        font-size: 25px;
+        font-weight: 600;
+    }
 }
 
-.card__title{
-    font-size: 25px;
+.enquiries {
+    display: flex;
+    margin-top: 2rem;
+    font-size: 20px;
+
+    &>p {
+        margin-right: 1rem;
+    }
+
+    &>a {
+        font-weight: 600;
+
+        &:hover {
+            color: $accent-color;
+        }
+    }
 }
