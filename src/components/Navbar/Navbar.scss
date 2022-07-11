@@ -19,7 +19,7 @@
 
 .navbar {
     display: flex;
-    // position: fixed;
+    position: relative;
     color: #D1D5DB;
     justify-content: space-between;
     align-items: center;
@@ -32,8 +32,6 @@
 .flag--button {
     border: none;
     background: none;
-
-
 }
 
 .flag {
@@ -51,8 +49,6 @@
         outline: 2px solid $accent-color;
 
     }
-
-
 }
 
 .menu {
@@ -123,6 +119,10 @@
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 500;
+
+    &>a {
+        color: $font-color--primary;
+    }
 
     &:hover {
         color: $accent-color;
