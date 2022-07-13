@@ -59,10 +59,10 @@ const Navbar = () => {
           <a href="/">{t("home")}</a>
         </li>
         <li className="menu-items--mobile">
-          <a href="/projects">{t("projects")}</a>
+          <a href="/#/projects">{t("projects")}</a>
         </li>
         <li className="menu-items--mobile">
-          <a href="/contact">{t("contact")}</a>
+          <a href="/#/contact">{t("contact")}</a>
         </li>
       </ul>
     </div>
