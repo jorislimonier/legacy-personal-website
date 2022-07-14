@@ -1,10 +1,8 @@
-import { useTranslation, Trans } from "react-i18next";
+import { Trans } from "react-i18next";
 
 import "./Home.scss";
 
 const Home = () => {
-  const { t } = useTranslation();
-
   return (
     <div className="home">
       {/* Container */}
@@ -17,8 +15,9 @@ const Home = () => {
             alt=""
           ></img>
           <h1 className="name">Joris LIMONIER</h1>
-          <h2 className="role">{t("role1")}</h2>
-          <h2 className="role">{t("role2")}</h2>
+          <h2 className="role">
+            <Trans>role</Trans>
+          </h2>
 
           {/* Services */}
         </div>

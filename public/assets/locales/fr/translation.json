@@ -1,8 +1,12 @@
 {
   "home": "Accueil",
   "contact": "Contact",
-  "role1": "Scientifique des Données",
-  "role2": "Expert Python & Machine Learning",
+  "projects": "Projets",
+  "role": "Scientifique des Données<br />Expert Python & Machine Learning",
+
+  "services-ml": "<strong>Machine Learning</strong> and <strong>Deep Learning</strong> create value for businesses, making them a must-have for competitive companies. <br /> <br />I use the most powerful tools on the market to turn your data into strategic advice and <strong>take your business to the next level</strong>. <br /> <br />I make my Machine Learning models <strong>easy to work with</strong> by incorporating them in a user-friendly interface with Python Dash.",
+  "services-python": "Carrying out cumbersome and repetitive tasks is boring and costy. Automate such tasks to save time and <strong>focus on what actually matters</strong>. <br /> <br />I write Python code to <strong>power your needs</strong>. I let you appropriately interact with them: <br /> Tech-heavy collaborators will use it? I can write an API in Flask. <br /> End-users need a GUI? I can make a beautiful web application in Dash.",
+  "services-ds": "Sometimes you have a great team that just needs a little upskill. Avoid wasting resources on recruitment by giving them a <strong>targeted training that fits your needs</strong>. <br /> <br />I give <strong>professional trainings</strong> that go <strong>straight to the point</strong>, where I provide all the keys to tackle your real world problems. <br /> Need something more advanced? Thanks to my background in Mathematics, I can dive deeper to teach the ins and outs of popular algorithms.",
 
   "contact_enquiries": "Pour toute question ou renseignement, contactez-moi à: "
 }

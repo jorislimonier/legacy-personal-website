@@ -3,14 +3,14 @@
 .home {
     width: 100%;
     background: $background-color;
-    padding-bottom: 100vh;
+    padding-bottom: 10vh;
 }
 
 .homepage-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    // width: 100%;
 }
 
 .hero-img {
