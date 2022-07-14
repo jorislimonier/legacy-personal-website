@@ -1,8 +1,8 @@
 {
   "home": "Accueil",
   "contact": "Contact",
-  "role1": "Scientifique des Données",
-  "role2": "Expert Python & Machine Learning",
+  "projects": "Projets",
+  "role": "Scientifique des Données<br />Expert Python & Machine Learning",
 
   "contact_enquiries": "Pour toute question ou renseignement, contactez-moi à: "
 }
