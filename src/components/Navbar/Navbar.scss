@@ -52,7 +52,7 @@
 }
 
 .menu {
-    @media(min-width: $small) {
+    @media(min-width: $sm) {
         display: none;
     }
 
