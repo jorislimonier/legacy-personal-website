@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 
 import "./Home.scss";
 
@@ -26,24 +26,20 @@ const Home = () => {
           <div className="service-card">
             <h2 className="service-title">Machine Learning</h2>
             <p className="service-description">
-              <strong>Machine Learning</strong> and{" "}
-              <strong>Deep Learning</strong> create value for businesses, making
-              them a must-have for competitive companies.
-              <br />
-              <br />I use the most powerful tools on the market to turn your
-              data into strategic advice and{" "}
-              <strong>take your business to the next level</strong>.
-              <br />
-              <br />I make my Machine Learning models{" "}
-              <strong>easy to work with</strong> by incorporating them in a
-              user-friendly interface with Python Dash.
+              <Trans>services-ml</Trans>
             </p>
           </div>
           <div className="service-card">
             <h2 className="service-title">Python</h2>
+            <p className="service-description">
+              <Trans>services-python</Trans>
+            </p>
           </div>
           <div className="service-card">
             <h2 className="service-title">Data Science Training</h2>
+            <p className="service-description">
+              <Trans>services-ds</Trans>
+            </p>
           </div>
         </div>
       </div>
