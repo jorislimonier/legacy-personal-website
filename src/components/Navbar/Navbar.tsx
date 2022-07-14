@@ -55,13 +55,13 @@ const Navbar = () => {
       {/* Mobile menu */}
 
       <ul className={nav ? "menu__mobile" : "menu__mobile--hide"}>
-        <li className="menu-items--mobile">
+        <li onClick={handleClick} className="menu-items--mobile">
           <a href="/">{t("home")}</a>
         </li>
-        <li className="menu-items--mobile">
+        <li onClick={handleClick} className="menu-items--mobile">
           <a href="/#/projects">{t("projects")}</a>
         </li>
-        <li className="menu-items--mobile">
+        <li onClick={handleClick} className="menu-items--mobile">
           <a href="/#/contact">{t("contact")}</a>
         </li>
       </ul>

@@ -26,12 +26,13 @@
     z-index: 1000;
     display: flex;
     flex-direction: column;
-
+    // margin-top: $navbar-height;
     position: relative;
-    // height: 350px;
+    height: 350px;
     align-items: center;
     justify-content: center;
     padding: 40px 0;
+    margin: 0 0 3rem;
 }
 
 
@@ -39,7 +40,7 @@
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 700;
-    color: #ccd6f6;
+    // color: #ccd6f6;
 
     @media (min-width: 640px) {
         font-size: 4rem;
@@ -51,7 +52,7 @@
     font-size: 2.15rem;
     line-height: 2.5rem;
     font-weight: 700;
-    color: #8892b0;
+    color: $font-color--secondary;
     text-align: center;
 
     @media (min-width: 640px) {
@@ -64,4 +65,29 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     color: #8892b0;
+}
+
+// Services
+
+.services-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.service-card {
+    background-color: rgb(36, 37, 62);
+    width: 20rem;
+    margin: 0 1rem;
+    padding: 2rem 2rem;
+    border-radius: 1rem;
+}
+
+.service-title {
+    text-align: center;
+    margin: 0 0 2rem;
+}
+
+.service-description {
+    // text-align: justify;
+    line-height: 1.75rem;
 }

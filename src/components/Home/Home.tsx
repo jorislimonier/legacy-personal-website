@@ -9,6 +9,7 @@ const Home = () => {
     <div className="home">
       {/* Container */}
       <div className="homepage-container">
+        {/* Header */}
         <div className="header-container">
           <img
             className="hero-img"
@@ -18,10 +19,32 @@ const Home = () => {
           <h1 className="name">Joris LIMONIER</h1>
           <h2 className="role">{t("role1")}</h2>
           <h2 className="role">{t("role2")}</h2>
-          {/* <p className="description">
-            I am a mathematician with years of experience in the field of data
-            science. My expertise is in Python, but I am also fluent in Julia.
-          </p> */}
+
+          {/* Services */}
+        </div>
+        <div className="services-wrapper">
+          <div className="service-card">
+            <h2 className="service-title">Machine Learning</h2>
+            <p className="service-description">
+              <strong>Machine Learning</strong> and{" "}
+              <strong>Deep Learning</strong> create value for businesses, making
+              them a must-have for competitive companies.
+              <br />
+              <br />I use the most powerful tools on the market to turn your
+              data into strategic advice and{" "}
+              <strong>take your business to the next level</strong>.
+              <br />
+              <br />I make my Machine Learning models{" "}
+              <strong>easy to work with</strong> by incorporating them in a
+              user-friendly interface with Python Dash.
+            </p>
+          </div>
+          <div className="service-card">
+            <h2 className="service-title">Python</h2>
+          </div>
+          <div className="service-card">
+            <h2 className="service-title">Data Science Training</h2>
+          </div>
         </div>
       </div>
     </div>
