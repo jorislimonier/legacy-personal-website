@@ -1,21 +1,5 @@
 @use "variables"as *;
 
-.flags-wrapper>span {
-    vertical-align: bottom;
-    margin: 0;
-}
-
-.logo {
-    font-weight: 600;
-    font-size: x-large;
-    margin: 0 3rem;
-    text-align: center;
-    vertical-align: middle;
-
-    &:hover {
-        color: $accent-color
-    }
-}
 
 .navbar {
     display: flex;
@@ -29,10 +13,25 @@
     background-color: $navbar-color;
 }
 
-.flag--button {
-    border: none;
-    background: none;
+
+.logo {
+    font-weight: 600;
+    font-size: x-large;
+    margin: 0 3rem;
+    text-align: center;
+    vertical-align: middle;
+
+    &:hover {
+        color: $accent-color
+    }
+
+    &-wrapper {
+        vertical-align: bottom;
+        margin: 0;
+
+    }
 }
+
 
 .flag {
     $height: 25px;
@@ -49,31 +48,47 @@
         outline: 2px solid $accent-color;
 
     }
+
+    &--mobile {
+        @extend .flag
+    }
+
+    &-button {
+        border: none;
+        background: none;
+
+        @media(max-width: $md) {
+            display: none;
+        }
+
+        --mobile {
+            @extend .flag-button
+        }
+    }
 }
 
 .menu {
-    @media(min-width: $sm) {
-        display: none;
-    }
+    display: none;
 
     @media(min-width: $md) {
         display: flex;
         margin: 0 2rem;
         justify-content: space-around;
     }
-}
 
-.menu-items {
-    @media(min-width: $md) {
-        margin: 0 1rem;
-        font-weight: 600;
-        font-size: x-large;
+    &-items {
+        @media(min-width: $md) {
+            margin: 0 1rem;
+            font-weight: 600;
+            font-size: x-large;
 
-        &:hover {
-            color: $accent-color
+            &:hover {
+                color: $accent-color
+            }
         }
     }
 }
+
 
 .menu__mobile {
     @media (min-width: $md) {
@@ -89,10 +104,11 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    background: #0A192F;
+    background: $background-color;
+
+
 
     &--hide {
-        @extend .menu__mobile;
         display: none;
     }
 }
@@ -102,10 +118,13 @@
         display: none;
     }
 
+    height: 100%;
     z-index: 10;
-    margin: 0 1.8rem;
+    margin: calc($navbar-height / 2 + 1.4rem) 1.8rem 0rem;
     font-size: 1.8rem;
     cursor: pointer;
+
+    justify-content: center;
 
     &:hover {
         color: $accent-color;

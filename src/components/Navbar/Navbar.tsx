@@ -26,7 +26,7 @@ const Navbar = () => {
         {/* Iterate over language flags */}
         {languages.map(({ code, country_code }) => (
           <button
-            className="flag--button"
+            className="flag-button"
             key={country_code}
             onClick={() => i18next.changeLanguage(code)}
           >
@@ -34,7 +34,7 @@ const Navbar = () => {
           </button>
         ))}
       </div>
-      {/* menu */}
+      {/* Menu */}
       <ul className="menu">
         <li className="menu-items">
           <a href="/">{t("home")}</a>
@@ -63,6 +63,18 @@ const Navbar = () => {
         </li>
         <li onClick={handleClick} className="menu-items--mobile">
           <a href="/#/contact">{t("contact")}</a>
+        </li>
+        <li>
+          {/* Iterate over language flags */}
+          {languages.map(({ code, country_code }) => (
+            <button
+              className="flag-button--mobile"
+              key={country_code}
+              onClick={() => i18next.changeLanguage(code)}
+            >
+              <span className={`flag--mobile fi fi-${country_code}`}></span>
+            </button>
+          ))}
         </li>
       </ul>
     </div>
