@@ -1,5 +1,5 @@
 # Portfolio Website
-[Link to the website](https://jorislimonier.herokuapp.com/)
+[Link to the website](https://jorislimonier.github.io/)
 
 
 
