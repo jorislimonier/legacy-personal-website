@@ -50,7 +50,10 @@
     }
 
     &--mobile {
-        @extend .flag
+        @extend .flag;
+        $height: 40px;
+        height: $height;
+        width: $height * calc(4/3);
     }
 
     &-button {
@@ -61,8 +64,11 @@
             display: none;
         }
 
-        --mobile {
-            @extend .flag-button
+        &--mobile {
+            border: none;
+            background: none;
+            padding: 1rem 1rem;
+
         }
     }
 }
@@ -87,16 +93,13 @@
             }
         }
     }
-}
-
-
-.menu__mobile {
+    &__mobile {
     @media (min-width: $md) {
         display: none;
     }
 
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     flex-direction: column;
@@ -112,24 +115,33 @@
         display: none;
     }
 }
+}
+
+
 
 .menu-icon--mobile {
     @media (min-width: $md) {
         display: none;
     }
 
-    height: 100%;
     z-index: 10;
-    margin: calc($navbar-height / 2 + 1.4rem) 1.8rem 0rem;
     font-size: 1.8rem;
     cursor: pointer;
-
-    justify-content: center;
+    align-self: center;
+    margin: 0.5rem 3rem 0 0;
 
     &:hover {
         color: $accent-color;
     }
 
+    // Cross when nav menu is open
+    &--open {
+        @extend .menu-icon--mobile;
+        position: fixed;
+        $dist: 50px;
+        right: 0.5rem;
+        top: 2rem;
+    }
 }
 
 .menu-items--mobile {

@@ -48,9 +48,16 @@ const Navbar = () => {
       </ul>
 
       {/* Hamburger */}
-      <div onClick={handleClick} className="menu-icon--mobile">
-        {nav ? <FaTimes /> : <FaBars />}
-      </div>
+
+      {nav ? (
+        <div onClick={handleClick} className="menu-icon--mobile--open">
+          <FaTimes />
+        </div>
+      ) : (
+        <div onClick={handleClick} className="menu-icon--mobile">
+          <FaBars />
+        </div>
+      )}
 
       {/* Mobile menu */}
 
