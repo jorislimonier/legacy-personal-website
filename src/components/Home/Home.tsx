@@ -24,21 +24,21 @@ const Home = () => {
           {/* Services */}
         </div>
         <div className="services">
-          <div className="service-card">
-            <h2 className="service-title">Machine Learning</h2>
-            <p className="service-description">
+          <div className="services__service-card">
+            <h2 className="services__service-title">Machine Learning</h2>
+            <p className="services__service-description">
               <Trans>services-ml</Trans>
             </p>
           </div>
-          <div className="service-card">
-            <h2 className="service-title">Python</h2>
-            <p className="service-description">
+          <div className="services__service-card">
+            <h2 className="services__service-title">Python</h2>
+            <p className="services__service-description">
               <Trans>services-python</Trans>
             </p>
           </div>
-          <div className="service-card">
-            <h2 className="service-title">Data Science Training</h2>
-            <p className="service-description">
+          <div className="services__service-card">
+            <h2 className="services__service-title">Data Science Training</h2>
+            <p className="services__service-description">
               <Trans>services-ds</Trans>
             </p>
           </div>
@@ -46,10 +46,10 @@ const Home = () => {
 
         {/* About me  */}
         <div className="about-me">
-          <img src={idMountain} alt="" className="about-me-image" />
-          <div className="about-me-text-container">
-            <h1 className="about-me-title">About me</h1>
-            <p className="about-me-text">
+          <img src={idMountain} alt="" className="about-me__image" />
+          <div className="about-me__text-container">
+            <h1 className="about-me__title">About me</h1>
+            <p className="about-me__text">
               I am a <strong>Data Scientist</strong> with a strong background in{" "}
               Mathematics, especially in Statistics.
               <br />
@@ -76,7 +76,7 @@ const Home = () => {
                 <strong>Machine Learning Modelisation & Serialization</strong>
               </li>
             </ul>
-            <p className="about-me-text">
+            <p className="about-me__text">
               My previous customers noted my ability to work efficiently,
               independentely as well as collaboratively. My priority is always
               to meet your requirements, while maintaining a heavy
