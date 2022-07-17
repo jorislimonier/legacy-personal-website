@@ -48,40 +48,10 @@ const Home = () => {
         <div className="about-me">
           <img src={idMountain} alt="" className="about-me__image" />
           <div className="about-me__text-container">
-            <h1 className="about-me__title">About me</h1>
-            <p className="about-me__text">
-              I am a <strong>Data Scientist</strong> with a strong background in{" "}
-              Mathematics, especially in Statistics.
-              <br />
-              <br />I acquired <strong>theoretical experience</strong> while
-              getting my Bachelor's in Mathematics and Master's in Artificial
-              Intelligence.
-              <br />
-              <br />I acquired <strong>practical experience</strong> while
-              working as a Data Analyst with independent customers, academic
-              researchers and established companies.
-              <br />
-              <br />I have assisted customers with each step of the data
-              workflow:
-            </p>
-            <ul>
-              <li>
-                <strong>Data Acquisition & Cleaning</strong>
-              </li>
-              <li>
-                <strong>Data exploration & Visualization</strong>, including
-                interactive dashboards
-              </li>
-              <li>
-                <strong>Machine Learning Modelisation & Serialization</strong>
-              </li>
-            </ul>
-            <p className="about-me__text">
-              My previous customers noted my ability to work efficiently,
-              independentely as well as collaboratively. My priority is always
-              to meet your requirements, while maintaining a heavy
-              collaboration.
-            </p>
+            <div
+              dangerouslySetInnerHTML={{ __html: t("about-me__text") }}
+              className="about-me__text"
+            />
           </div>
         </div>
       </div>

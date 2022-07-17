@@ -4,12 +4,10 @@ import HttpApi from "i18next-http-backend";
 import { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { initReactI18next } from "react-i18next";
-import { BrowserRouter, HashRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import App from "./App";
 import "./index.scss";
 
-// https://www.youtube.com/watch?v=w04LXKlusCQ
-// Stopped at 12:17
 i18next
   .use(initReactI18next) // passes i18n down to react-i18next
   .use(LanguageDetector)
@@ -28,17 +26,13 @@ i18next
         "htmlTag",
         "subdomain",
       ],
-      // react: {
-      //   transSupportBasicHtmlNodes: false, // allow <br/> and simple html elements in translations
-      //   transKeepBasicHtmlNodesFor: ["br", "strong", "i"], // don't convert to <1></1> if simple react elements
-      // },
     },
     backend: { loadPath: "/assets/locales/{{lng}}/translation.json" },
-    // interpolation: { escapeValue: true },
+    interpolation: { escapeValue: true },
   });
 
 const loadingMarkup = (
-  <div className="py-4 text-center">
+  <div className="loading">
     <h3>Loading..</h3>
   </div>
 );
