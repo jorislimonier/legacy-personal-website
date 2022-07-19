@@ -1,0 +1,16 @@
+@use "variables"as *;
+
+.title {
+    text-align: center;
+    margin: 5rem 0;
+    font-size: 3rem;
+}
+
+.content {
+    width: 900px;
+    // background-color: #ff00003e;
+    line-height: $p-line-height;
+    margin: auto;
+    text-align: justify;
+    font-size: 1.4rem;
+}

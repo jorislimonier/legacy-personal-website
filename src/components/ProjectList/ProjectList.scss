@@ -1,0 +1,23 @@
+@use "variables"as *;
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project__card {
+    width: 200px;
+    height: 160px;
+    background-color: $background-color--secondary;
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+}
+
+.project__content {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
