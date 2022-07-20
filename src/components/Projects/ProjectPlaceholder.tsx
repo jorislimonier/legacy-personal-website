@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import Project1 from "./Project1";
-import "./ProjectContainer.scss";
+import "./ProjectPlaceholder.scss";
 
 const data = [
   { title: "Invoice builder in Julia", content: <Project1 /> },
@@ -13,7 +13,7 @@ const data = [
   { title: "Blog post 8", content: "bp 8" },
   // { id: 3, content: "bp 3" },
 ];
-const ProjectContainer = () => {
+const ProjectPlaceholder = () => {
   const { id } = useParams();
   const blogData = data.map((item, i) => {
     if (i + 1 === Number(id)) {
@@ -30,5 +30,5 @@ const ProjectContainer = () => {
 
   return <div>{blogData}</div>;
 };
-export { ProjectContainer, data };
+export { ProjectPlaceholder, data };
 // export data;

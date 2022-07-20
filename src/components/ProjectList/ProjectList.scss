@@ -3,10 +3,11 @@
 .projects-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .project__card {
-    width: 200px;
+    width: 400px;
     height: 160px;
     background-color: $background-color--secondary;
     margin: 1rem;

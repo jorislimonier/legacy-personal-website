@@ -1,13 +1,13 @@
-import { data } from "../Projects/ProjectContainer";
+import { data } from "../Projects/ProjectPlaceholder";
 import "./ProjectList.scss";
 
 const ProjectList = () => {
   const projects = data.map((item, i) => {
     return (
-      <div className="project__card" key={i}>
+      <a key={i} href={`/#/project/${i + 1}`} className="project__card">
         <h2>{item.title}</h2> <br />
-        <p className="project__content">{item.content}</p>
-      </div>
+        <div className="project__content">{item.content}</div>
+      </a>
     );
   });
   return <div className="projects-list">{projects}</div>;
