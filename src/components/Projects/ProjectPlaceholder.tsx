@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import Project01 from "./Project01";
 import Project02 from "./Project02";
 import "./ProjectPlaceholder.scss";
-import tags from "./Tags.json";
+// import tags from "./Tags.json";
 
 const data = [
   {
