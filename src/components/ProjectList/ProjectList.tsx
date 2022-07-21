@@ -4,10 +4,12 @@ import "./ProjectList.scss";
 import { useTranslation, Trans } from "react-i18next";
 
 const ProjectList = () => {
-  const t = useTranslation();
+  // eslint-disable-next-line
+  const t = useTranslation(); // @ts-ignore
+
   // Link tags to their color
   const colorPalette = {
-    Julia: "#4C3A51",
+    Julia: "#9558B2",
     AI: "#1212ff",
     "Data Science": "#774360",
     Invoice: "#B05068",
@@ -40,7 +42,7 @@ const ProjectList = () => {
     )
     .map((item, i) => {
       return (
-        <a key={i} href={`/#/project/${i + 1}`} className="project__card">
+        <a key={i} href={`/#/projects/${i + 1}`} className="project__card">
           <h2>{item.title}</h2> <br />
           <div className="project__tags">
             {item.tags.map((tag, i) => createTags(tag, i))}
