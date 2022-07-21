@@ -15,6 +15,11 @@ i18next
   .init({
     supportedLngs: ["en", "fr"],
     fallbackLng: "en",
+    react: {
+      // https://react.i18next.com/latest/trans-component#trans-props
+      transSupportBasicHtmlNodes: true,
+      transKeepBasicHtmlNodesFor: ["br", "strong", "b", "i", "input", "li"],
+    },
     detection: {
       order: [
         "path",
@@ -28,7 +33,7 @@ i18next
       ],
     },
     backend: { loadPath: "/assets/locales/{{lng}}/translation.json" },
-    interpolation: { escapeValue: true },
+    interpolation: { escapeValue: false },
   });
 
 const loadingMarkup = (

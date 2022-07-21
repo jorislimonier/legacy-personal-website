@@ -1,50 +1,6 @@
 import { useParams } from "react-router-dom";
-import Project01 from "./Project01";
-import Project02 from "./Project02";
 import "./ProjectWrapper.scss";
-
-const data = [
-  {
-    title: "Invoice builder in Julia",
-    content: <Project01 />,
-    tags: ["Julia", "AI", "Data Science", "Invoice", "HTTP", "Automation"],
-  },
-  {
-    title: "Blog post 2",
-    content: <Project02 />,
-    tags: ["Data Science", "AI"],
-  },
-  {
-    title: "Blog post 3",
-    content: <Project02 />,
-    tags: ["AI", "Data Science"],
-  },
-  {
-    title: "Blog post 4",
-    content: <Project02 />,
-    tags: ["Data Science", "AI"],
-  },
-  {
-    title: "Blog post 5",
-    content: <Project02 />,
-    tags: ["AI", "Data Science"],
-  },
-  {
-    title: "Blog post 6",
-    content: <Project02 />,
-    tags: ["Data Science", "AI"],
-  },
-  {
-    title: "Blog post 7",
-    content: <Project02 />,
-    tags: ["AI", "Data Science"],
-  },
-  {
-    title: "Blog post 8",
-    content: <Project02 />,
-    tags: ["Data Science", "AI"],
-  },
-];
+import { data } from "../ProjectList/ProjectList";
 
 const ProjectWrapper = () => {
   const { id } = useParams();
@@ -63,5 +19,5 @@ const ProjectWrapper = () => {
 
   return <div>{blogData}</div>;
 };
-export { ProjectWrapper, data };
+export { ProjectWrapper };
 // export data;

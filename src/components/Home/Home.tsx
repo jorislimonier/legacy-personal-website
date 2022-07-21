@@ -48,10 +48,10 @@ const Home = () => {
         <div className="about-me">
           <img src={idMountain} alt="" className="about-me__image" />
           <div className="about-me__text-container">
-            <div
-              dangerouslySetInnerHTML={{ __html: t("about-me__text") }}
-              className="about-me__text"
-            />
+            <h1 className="about-me__title">{t("about-me__title")}</h1>
+            <p>{<Trans>about-me__paragraph1</Trans>}</p>
+            <ul className="about-me__list">{<Trans>about-me__list</Trans>}</ul>
+            <p>{<Trans>about-me__paragraph2</Trans>}</p>
           </div>
         </div>
       </div>

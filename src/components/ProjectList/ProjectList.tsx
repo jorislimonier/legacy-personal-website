@@ -1,18 +1,63 @@
 import { useState } from "react";
-import { data } from "../Projects/ProjectWrapper";
 import "./ProjectList.scss";
 import { useTranslation, Trans } from "react-i18next";
+import Project01 from "../Projects/Project01";
+import Project02 from "../Projects/Project02";
+
+const data = [
+  {
+    title: "Invoice builder in Julia",
+    content: <Project01 />,
+    tags: ["Julia", "AI", "Data Science", "API"],
+  },
+  {
+    title: "Blog post 2",
+    content: <Project02 />,
+    tags: ["Data Science", "AI"],
+  },
+  // {
+  //   title: "Blog post 3",
+  //   content: <Project02 />,
+  //   tags: ["AI", "Data Science"],
+  // },
+  // {
+  //   title: "Blog post 4",
+  //   content: <Project02 />,
+  //   tags: ["Data Science", "AI"],
+  // },
+  // {
+  //   title: "Blog post 5",
+  //   content: <Project02 />,
+  //   tags: ["AI", "Data Science"],
+  // },
+  // {
+  //   title: "Blog post 6",
+  //   content: <Project02 />,
+  //   tags: ["Data Science", "AI"],
+  // },
+  // {
+  //   title: "Blog post 7",
+  //   content: <Project02 />,
+  //   tags: ["AI", "Data Science"],
+  // },
+  // {
+  //   title: "Blog post 8",
+  //   content: <Project02 />,
+  //   tags: ["Data Science", "AI"],
+  // },
+];
 
 const ProjectList = () => {
   // eslint-disable-next-line
-  const t = useTranslation(); // @ts-ignore
+  //
+  const { t } = useTranslation();
 
   // Link tags to their color
   const colorPalette = {
     Julia: "#9558B2",
-    AI: "#1212ff",
-    "Data Science": "#774360",
-    Invoice: "#B05068",
+    AI: "#0000ff",
+    "Data Science": "#00663d",
+    API: "#cc0000",
     HTTP: "#305068",
     Automation: "#66aa66",
   };
@@ -59,13 +104,13 @@ const ProjectList = () => {
       </h1>
       <input
         type="text"
-        placeholder="Search..."
+        placeholder={t("project-list__input__placeholder")}
         className="project-list__input"
         onChange={(e) => setQuery(e.target.value)}
       />
-      <div className="project-list__list">{projects}</div>
+      )<div className="project-list__list">{projects}</div>
     </div>
   );
 };
 
-export default ProjectList;
+export { ProjectList, data };

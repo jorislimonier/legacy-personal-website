@@ -25,6 +25,7 @@
             padding: 0.5rem 1rem;
             font-size: 1.2rem;
             font-weight: 700;
+
         }
     }
 
@@ -73,11 +74,12 @@
     }
 
     &__tag {
-        background-color: rgb(255, 0, 0);
+        background-color: #000000;
         display: inline-block;
-        padding: 0 0.5rem;
+        padding: 0.15rem 0.6rem;
         margin: 0 0.3rem;
         border-radius: 10px;
+        font-weight: 600;
 
         &:first-child {
             margin-left: 0;
