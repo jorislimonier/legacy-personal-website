@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import Project01 from "./Project01";
 import Project02 from "./Project02";
-import "./ProjectPlaceholder.scss";
+import "./ProjectWrapper.scss";
 
 const data = [
   {
@@ -46,7 +46,7 @@ const data = [
   },
 ];
 
-const ProjectPlaceholder = () => {
+const ProjectWrapper = () => {
   const { id } = useParams();
   const blogData = data.map((item, i) => {
     if (i + 1 === Number(id)) {
@@ -63,5 +63,5 @@ const ProjectPlaceholder = () => {
 
   return <div>{blogData}</div>;
 };
-export { ProjectPlaceholder, data };
+export { ProjectWrapper, data };
 // export data;

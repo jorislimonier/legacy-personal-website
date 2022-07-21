@@ -1,7 +1,10 @@
-import { data } from "../Projects/ProjectPlaceholder";
+import { useState } from "react";
+import { data } from "../Projects/ProjectWrapper";
 import "./ProjectList.scss";
+import { useTranslation, Trans } from "react-i18next";
 
 const ProjectList = () => {
+  const t = useTranslation();
   // Link tags to their color
   const colorPalette = {
     Julia: "#4C3A51",
@@ -9,7 +12,7 @@ const ProjectList = () => {
     "Data Science": "#774360",
     Invoice: "#B05068",
     HTTP: "#305068",
-    Automation: "#12ff12",
+    Automation: "#66aa66",
   };
 
   // Create a tag with consistent color accross project cards
@@ -25,20 +28,39 @@ const ProjectList = () => {
     );
   };
 
-  const projects = data.map((item, i) => {
-    return (
-      <a key={i} href={`/#/project/${i + 1}`} className="project__card">
-        <h2>{item.title}</h2> <br />
-        <div className="project__tags">
-          {item.tags.map((tag, i) => createTags(tag, i))}
-        </div>
-        <div className="project__content">{item.content}</div>
-      </a>
-    );
-  });
+  const [query, setQuery] = useState("");
+
+  // Project cards
+  const projects = data
+    .filter(
+      (item) =>
+        item.title.toLowerCase().includes(query) ||
+        // item.content.children.includes(query) ||
+        item.tags.some((tag) => tag.toLowerCase().includes(query))
+    )
+    .map((item, i) => {
+      return (
+        <a key={i} href={`/#/project/${i + 1}`} className="project__card">
+          <h2>{item.title}</h2> <br />
+          <div className="project__tags">
+            {item.tags.map((tag, i) => createTags(tag, i))}
+          </div>
+          <div className="project__content">{item.content}</div>
+        </a>
+      );
+    });
+
   return (
     <div className="project-list">
-      <h1 className="project-list__title">List of projects</h1>
+      <h1 className="project-list__title">
+        <Trans>project-list__title</Trans>
+      </h1>
+      <input
+        type="text"
+        placeholder="Search..."
+        className="project-list__input"
+        onChange={(e) => setQuery(e.target.value)}
+      />
       <div className="project-list__list">{projects}</div>
     </div>
   );
