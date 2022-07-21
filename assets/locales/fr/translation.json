@@ -10,5 +10,7 @@
 
   "about-me__text": "<h1 className='about-me__title'>Qui suis-je ?</h1><p>Je suis un <strong>Scientifique des Données</strong> avec une forte formation initiale en Mathématiques, en particulier en Statistiques. <br /> <br />J'ai acquis de l'<strong>expérience théorique</strong> lors de mon Bachelor en Mathématiques et de mon Master en Intelligence  Artificielle. <br /> <br />J'ai acquis de l'<strong>expérience pratique</strong> lors de mon travail en tant qu'Analyste des Données avec des clients indépendents, des chercheurs universitaires et des entreprises reconnues. <br /> <br />J'ai accompagné des clients avec chaque étape du cycle de traîtement des données: </p><ul><li><strong>Acquisition & Nettoyage des données</strong></li><li><strong>Exploration et Visualisation des données</strong>, y compris par l'utilisation de tableaux de bord.</li><li><strong>Modélisation & Déploiement en Machine Learning</strong></li></ul><p>Mes précédents clients attestent de ma capacité à travailler efficacement, indépendamment et de manière collaborative. Ma priorité est de toujours satisfaire vos besoins, tout en maintenant une communication sans faille.</p>",
 
+  "project-list__title": "Liste des projets",
+
   "contact_enquiries": "Pour toute question ou renseignement, contactez-moi à: "
 }
