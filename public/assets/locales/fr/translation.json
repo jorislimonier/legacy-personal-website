@@ -15,6 +15,7 @@
 
   "project-list__title": "Liste des projets",
   "project-list__input__placeholder": "Recherchez des tags ou des titres . . .",
+  "project1__title": "Générateur de factures en Julia",
 
   "contact_enquiries": "Pour toute question ou renseignement, contactez-moi à: "
 }

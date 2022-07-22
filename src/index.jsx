@@ -15,6 +15,7 @@ i18next
   .init({
     supportedLngs: ["en", "fr"],
     fallbackLng: "en",
+    saveMissing: true,
     react: {
       // https://react.i18next.com/latest/trans-component#trans-props
       transSupportBasicHtmlNodes: true,

@@ -6,7 +6,7 @@ import Project02 from "../Projects/Project02";
 
 const data = [
   {
-    title: "Invoice builder in Julia",
+    title: "Invoice generator in Julia",
     content: <Project01 />,
     tags: ["Julia", "AI", "Data Science", "API"],
   },
@@ -15,43 +15,12 @@ const data = [
     content: <Project02 />,
     tags: ["Data Science", "AI"],
   },
-  // {
-  //   title: "Blog post 3",
-  //   content: <Project02 />,
-  //   tags: ["AI", "Data Science"],
-  // },
-  // {
-  //   title: "Blog post 4",
-  //   content: <Project02 />,
-  //   tags: ["Data Science", "AI"],
-  // },
-  // {
-  //   title: "Blog post 5",
-  //   content: <Project02 />,
-  //   tags: ["AI", "Data Science"],
-  // },
-  // {
-  //   title: "Blog post 6",
-  //   content: <Project02 />,
-  //   tags: ["Data Science", "AI"],
-  // },
-  // {
-  //   title: "Blog post 7",
-  //   content: <Project02 />,
-  //   tags: ["AI", "Data Science"],
-  // },
-  // {
-  //   title: "Blog post 8",
-  //   content: <Project02 />,
-  //   tags: ["Data Science", "AI"],
-  // },
 ];
 
 const ProjectList = () => {
   // eslint-disable-next-line
-  //
   const { t } = useTranslation();
-
+  //
   // Link tags to their color
   const colorPalette = {
     Julia: "#9558B2",
@@ -76,7 +45,7 @@ const ProjectList = () => {
   };
 
   const [query, setQuery] = useState("");
-
+  // console.log(<Trans>project1__title</Trans>.keys)
   // Project cards
   const projects = data
     .filter(

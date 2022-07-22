@@ -15,6 +15,7 @@
 
   "project-list__title": "List of projects",
   "project-list__input__placeholder": "Search tags or titles . . .",
+  "project1__title": "Invoice generator in Julia",
 
   "contact_enquiries": "For questions and enquiries, please contact me at: "
 }
