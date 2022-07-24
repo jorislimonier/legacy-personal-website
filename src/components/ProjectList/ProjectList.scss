@@ -2,6 +2,40 @@
 
 
 .project {
+    &__global-tags {
+        // display: flex;
+        justify-content: center;
+        margin: 0 auto 2rem;
+        width: calc(704px + 2rem);
+        overflow: auto;
+        white-space: nowrap;
+
+        $scrollbar-height: 7px;
+
+        &::-webkit-scrollbar {
+            height: $scrollbar-height;
+        }
+
+        &:hover {
+            &::-webkit-scrollbar {
+                height: $scrollbar-height;
+
+                &-track {
+                    // box-shadow: inset 0 0 5px red;
+                    border-radius: 10px;
+                }
+
+                &-thumb {
+                    background: #a2abd9b5;
+                    border-radius: 10px;
+
+                    &:hover {
+                        background: #a2abd9e1;
+                    }
+                }
+            }
+        }
+    }
 
     &-list {
         &__title {
@@ -18,7 +52,7 @@
 
         &__input {
             display: flex;
-            width: 800px;
+            width: 700px;
             height: 30px;
             margin: 0 auto 3rem;
             border-radius: 10px;
@@ -34,25 +68,27 @@
         height: auto;
         background-color: $background-color--secondary;
         margin: 1rem;
-        padding: 1.5rem;
+        padding: 1.9rem;
         border-radius: 20px;
     }
 
     &__tags {
-        // background-color: green;
+
         width: 100%;
-        height: 35px;
+        height: 40px;
         overflow: auto;
         white-space: nowrap;
         margin: 0.5rem 0 0.5rem;
 
+        $scrollbar-height: 7px;
+
         &::-webkit-scrollbar {
-            height: 7px;
+            height: $scrollbar-height;
         }
 
         &:hover {
             &::-webkit-scrollbar {
-                height: 7px;
+                height: $scrollbar-height;
 
                 &-track {
                     // box-shadow: inset 0 0 5px red;
@@ -77,7 +113,7 @@
         background-color: #000000;
         display: inline-block;
         padding: 0.15rem 0.6rem;
-        margin: 0 0.3rem;
+        margin: 0 0.4rem;
         border-radius: 10px;
         font-weight: 600;
 

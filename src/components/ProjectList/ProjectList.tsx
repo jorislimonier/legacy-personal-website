@@ -1,26 +1,39 @@
-import { useState } from "react";
+import { useState, FC } from "react";
 import "./ProjectList.scss";
 import { useTranslation, Trans } from "react-i18next";
 import Project01 from "../Projects/Project01";
 import Project02 from "../Projects/Project02";
 
-const data = [
+const data: { title: string; content: any; tags: string[] }[] = [
   {
     title: "Invoice generator in Julia",
     content: <Project01 />,
-    tags: ["Julia", "AI", "Data Science", "API"],
+    tags: [
+      "Julia",
+      "AI",
+      "Data Science",
+      "API",
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g",
+      "h",
+      "i",
+      "j",
+      "k",
+      "l",
+      "m",
+      "n",
+      "o",
+    ],
   },
   {
     title: "The Color Path",
     content: <Project02 />,
-    tags: [
-      "Python",
-      "Data Visualization",
-      "Plotly",
-      "Plotly",
-      "Data Science",
-      "Dash",
-    ],
+    tags: ["Python", "Data Visualization", "Plotly", "Data Science", "Dash"],
   },
 ];
 
@@ -43,7 +56,7 @@ const ProjectList = () => {
   };
 
   // Create a tag with consistent color accross project cards
-  const createTags = (tag: string, i) => {
+  const createTags = (tag: string, i: number) => {
     return (
       <span
         key={i}
@@ -56,23 +69,25 @@ const ProjectList = () => {
   };
 
   // Unique tags display
-  const uniqueTagsDisplay = data
-    .map((item) => {
-      return item.tags;
-    })
-    .reduce((prev, curr) => {
-      return prev.concat(curr);
-    }, [])
-    .filter((value, index, self) => {
-      return self.indexOf(value) === index;
-    })
-    .map((item, i) => {
-      return (
-        <div key={i} className="unique-tags">
-          {createTags(item, i)}
-        </div>
-      );
-    });
+  const globalTagsConcat = data
+    .map((item) => item.tags)
+    .reduce((prev, curr) => prev.concat(curr), []);
+
+  const globalTagsFrequency = globalTagsConcat.reduce((prev, curr) => {
+    prev[curr] = prev[curr] + 1 || 1;
+    return prev;
+  }, {});
+
+  const globalTagsSorted = Object.keys(globalTagsFrequency).sort(
+    (a, b) =>
+      globalTagsFrequency[b] - globalTagsFrequency[a] || a.localeCompare(b)
+  );
+  console.log(globalTagsConcat);
+  console.log(globalTagsFrequency);
+  console.log(globalTagsSorted);
+  const globalTagsDisplay = globalTagsSorted
+    .filter((value, index, self) => self.indexOf(value) === index)
+    .map((item, i) => createTags(item, i));
 
   // Project cards
   const [query, setQuery] = useState("");
@@ -105,7 +120,7 @@ const ProjectList = () => {
         className="project-list__input"
         onChange={(e) => setQuery(e.target.value)}
       />
-      <div className="project-list__list">{uniqueTagsDisplay}</div>
+      <div className="project__global-tags">{globalTagsDisplay}</div>
       <div className="project-list__list">{projects}</div>
     </div>
   );
