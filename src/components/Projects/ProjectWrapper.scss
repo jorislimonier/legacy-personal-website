@@ -2,7 +2,7 @@
 
 .title {
     text-align: center;
-    margin: 5rem 0;
+    margin: 4rem 0 5rem;
     font-size: 3rem;
 }
 
@@ -13,4 +13,26 @@
     margin: auto;
     text-align: justify;
     font-size: 1.4rem;
+}
+
+.back-link {
+    margin: 3rem 0 0 3rem;
+    display: flex;
+    color: $font-color--secondary;
+
+    &:hover {
+        color: $accent-color;
+    }
+
+    &__chevron {
+        font-size: 25px;
+        vertical-align: bottom;
+        margin-right: 0.8rem;
+    }
+
+    &__text {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
 }

@@ -2,40 +2,6 @@
 
 
 .project {
-    &__global-tags {
-        // display: flex;
-        justify-content: center;
-        margin: 0 auto 2rem;
-        width: calc(704px + 2rem);
-        overflow: auto;
-        white-space: nowrap;
-
-        $scrollbar-height: 7px;
-
-        &::-webkit-scrollbar {
-            height: $scrollbar-height;
-        }
-
-        &:hover {
-            &::-webkit-scrollbar {
-                height: $scrollbar-height;
-
-                &-track {
-                    // box-shadow: inset 0 0 5px red;
-                    border-radius: 10px;
-                }
-
-                &-thumb {
-                    background: #a2abd9b5;
-                    border-radius: 10px;
-
-                    &:hover {
-                        background: #a2abd9e1;
-                    }
-                }
-            }
-        }
-    }
 
     &-list {
         &__title {
@@ -44,23 +10,70 @@
             font-size: 3rem;
         }
 
+        $input__padding-x: 1rem;
+        $input__width: 700px;
+
+        // @mixin inputWidth($iw) {}
+
+// @media (max-width: $md) {
+//     $input__width: 100px;
+//     background-color: red;
+// }
+
+
+        &__input {
+            display: flex;
+            width: $input__width;
+            height: 30px;
+            margin: 0 auto 3rem;
+            border-radius: 10px;
+            border-width: 0px;
+            padding: 0.5rem $input__padding-x;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        &__tags {
+            justify-content: center;
+            margin: 0 auto 2rem;
+            width: calc($input__width + 2*$input__padding-x);
+            overflow: auto;
+            white-space: nowrap;
+
+            $scrollbar-height: 7px;
+
+            &::-webkit-scrollbar {
+                height: $scrollbar-height;
+            }
+
+            &:hover {
+                &::-webkit-scrollbar {
+                    height: $scrollbar-height;
+
+                    &-track {
+                        // box-shadow: inset 0 0 5px red;
+                        border-radius: 10px;
+                    }
+
+                    &-thumb {
+                        background: #a2abd9b5;
+                        border-radius: 10px;
+
+                        &:hover {
+                            background: #a2abd9e1;
+                        }
+                    }
+                }
+            }
+        }
+
         &__list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
 
-        &__input {
-            display: flex;
-            width: 700px;
-            height: 30px;
-            margin: 0 auto 3rem;
-            border-radius: 10px;
-            padding: 0.5rem 1rem;
-            font-size: 1.2rem;
-            font-weight: 700;
 
-        }
     }
 
     &__card {

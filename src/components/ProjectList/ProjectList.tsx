@@ -1,4 +1,4 @@
-import { useState, FC } from "react";
+import { useState } from "react";
 import "./ProjectList.scss";
 import { useTranslation, Trans } from "react-i18next";
 import Project01 from "../Projects/Project01";
@@ -13,21 +13,21 @@ const data: { title: string; content: any; tags: string[] }[] = [
       "AI",
       "Data Science",
       "API",
-      "a",
-      "b",
-      "c",
-      "d",
-      "e",
-      "f",
-      "g",
-      "h",
-      "i",
-      "j",
-      "k",
-      "l",
-      "m",
-      "n",
-      "o",
+      // "a",
+      // "b",
+      // "c",
+      // "d",
+      // "e",
+      // "f",
+      // "g",
+      // "h",
+      // "i",
+      // "j",
+      // "k",
+      // "l",
+      // "m",
+      // "n",
+      // "o",
     ],
   },
   {
@@ -82,9 +82,6 @@ const ProjectList = () => {
     (a, b) =>
       globalTagsFrequency[b] - globalTagsFrequency[a] || a.localeCompare(b)
   );
-  console.log(globalTagsConcat);
-  console.log(globalTagsFrequency);
-  console.log(globalTagsSorted);
   const globalTagsDisplay = globalTagsSorted
     .filter((value, index, self) => self.indexOf(value) === index)
     .map((item, i) => createTags(item, i));
@@ -120,7 +117,7 @@ const ProjectList = () => {
         className="project-list__input"
         onChange={(e) => setQuery(e.target.value)}
       />
-      <div className="project__global-tags">{globalTagsDisplay}</div>
+      <div className="project-list__tags">{globalTagsDisplay}</div>
       <div className="project-list__list">{projects}</div>
     </div>
   );
