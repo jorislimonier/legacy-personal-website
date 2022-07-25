@@ -1,5 +1,46 @@
 @use "variables"as *;
 
+$input__padding-x: 1rem;
+$input__width: 700px;
+
+// Compute width of search bar and project-list__tags accounting for padding-x
+@mixin inp($input__width) {
+    .project-list__input {
+        width: $input__width;
+    }
+
+    .project-list__tags {
+        width: calc($input__width + 2*$input__padding-x);
+    }
+}
+
+@mixin tagsNavbar {
+    $scrollbar-height: 10px;
+
+    &::-webkit-scrollbar {
+        height: $scrollbar-height;
+    }
+
+    &:hover {
+        &::-webkit-scrollbar {
+            height: $scrollbar-height;
+
+            &-track {
+                // box-shadow: inset 0 0 5px red;
+                border-radius: 10px;
+            }
+
+            &-thumb {
+                background: #a2abd9b5;
+                border-radius: 10px;
+
+                &:hover {
+                    background: #a2abd9e1;
+                }
+            }
+        }
+    }
+}
 
 .project {
 
@@ -10,12 +51,9 @@
             font-size: 3rem;
         }
 
-        $input__padding-x: 1rem;
-        $input__width: 700px;
 
         &__input {
             display: flex;
-            // width: $input__width;
             height: 30px;
             margin: 0 auto 3rem;
             border-radius: 10px;
@@ -27,58 +65,24 @@
 
         &__tags {
             justify-content: center;
-            margin: 0 auto 2rem;
-            // @include inputWidth(700px, 1rem);
-            // width: calc($input__width + 2*$input__padding-x);
+            margin: 0 auto 1rem;
+            padding: 0 0 1rem;
             overflow: auto;
             white-space: nowrap;
 
-            $scrollbar-height: 7px;
+            @include tagsNavbar;
 
-            &::-webkit-scrollbar {
-                height: $scrollbar-height;
-            }
-
-            &:hover {
-                &::-webkit-scrollbar {
-                    height: $scrollbar-height;
-
-                    &-track {
-                        // box-shadow: inset 0 0 5px red;
-                        border-radius: 10px;
-                    }
-
-                    &-thumb {
-                        background: #a2abd9b5;
-                        border-radius: 10px;
-
-                        &:hover {
-                            background: #a2abd9e1;
-                        }
-                    }
-                }
-            }
         }
 
-        // Compute width of search bar and project-list__tags accounting for padding-x
-        @mixin inp($input__width) {
-            .project-list__input {
-                width: $input__width;
-            }
-
-            .project-list__tags {
-                width: calc($input__width + 2*$input__padding-x);
-            }
-        }
-
-        @include inp(700px);
+        // computer width
+        @include inp(calc(500px + 30%));
 
         @media (max-width: $md) {
-            @include inp(380px)
+            @include inp(400px)
         }
 
         @media (max-width: $sm) {
-            @include inp(300px)
+            @include inp(310px)
         }
 
         &__list {
@@ -89,49 +93,33 @@
     }
 
     &__card {
-        width: 400px;
+        width: 600px;
         height: auto;
         background-color: $background-color--secondary;
         margin: 1rem;
         padding: 1.9rem;
         border-radius: 20px;
+
+        @media (max-width: $md) {
+            width: 400px;
+            padding: 1.6rem;
+        }
+
+        @media (max-width: $sm) {
+            width: 330px;
+            padding: 1rem;
+        }
     }
 
     &__tags {
-
         width: 100%;
         height: 40px;
         overflow: auto;
         white-space: nowrap;
         margin: 0.5rem 0 0.5rem;
+        padding: 0 0 0.5rem;
 
-        $scrollbar-height: 7px;
-
-        &::-webkit-scrollbar {
-            height: $scrollbar-height;
-        }
-
-        &:hover {
-            &::-webkit-scrollbar {
-                height: $scrollbar-height;
-
-                &-track {
-                    // box-shadow: inset 0 0 5px red;
-                    border-radius: 10px;
-                }
-
-                &-thumb {
-                    background: #a2abd9b5;
-                    border-radius: 10px;
-
-                    &:hover {
-                        background: #a2abd9e1;
-                    }
-                }
-            }
-        }
-
-
+        @include tagsNavbar;
     }
 
     &__tag {
@@ -141,6 +129,7 @@
         margin: 0 0.4rem;
         border-radius: 10px;
         font-weight: 600;
+        font-size: 18px;
 
         &:first-child {
             margin-left: 0;
@@ -153,9 +142,17 @@
 
     &__content {
         display: -webkit-box;
-        -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+
+        @media (max-width: $md) {
+            -webkit-line-clamp: 4;
+        }
+
+        @media (max-width: $sm) {
+            -webkit-line-clamp: 5;
+        }
     }
 }

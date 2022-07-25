@@ -6,7 +6,7 @@ import Project02 from "../Projects/Project02";
 
 const data: { title: string; content: any; tags: string[] }[] = [
   {
-    title: "Invoice generator in Julia",
+    title: "Invoice Generator in Julia",
     content: <Project01 />,
     tags: [
       "Julia",
@@ -58,31 +58,35 @@ const ProjectList = () => {
   // Create a tag with consistent color accross project cards
   const createTags = (tag: string, i: number) => {
     return (
-      <span
-        key={i}
+      <a
+        href=""
         className="project__tag"
         style={{ backgroundColor: colorPalette[tag] }}
       >
-        {tag}
-      </span>
+        <span key={i}>{tag}</span>
+      </a>
     );
   };
 
   // Unique tags display
-  const globalTagsConcat = data
+  const projectListTagsConcat = data
     .map((item) => item.tags)
     .reduce((prev, curr) => prev.concat(curr), []);
 
-  const globalTagsFrequency = globalTagsConcat.reduce((prev, curr) => {
-    prev[curr] = prev[curr] + 1 || 1;
-    return prev;
-  }, {});
-
-  const globalTagsSorted = Object.keys(globalTagsFrequency).sort(
-    (a, b) =>
-      globalTagsFrequency[b] - globalTagsFrequency[a] || a.localeCompare(b)
+  const projectListTagsFrequency = projectListTagsConcat.reduce(
+    (prev, curr) => {
+      prev[curr] = prev[curr] + 1 || 1;
+      return prev;
+    },
+    {}
   );
-  const globalTagsDisplay = globalTagsSorted
+
+  const projectListTagsSorted = Object.keys(projectListTagsFrequency).sort(
+    (a, b) =>
+      projectListTagsFrequency[b] - projectListTagsFrequency[a] ||
+      a.localeCompare(b)
+  );
+  const projectListTagsDisplay = projectListTagsSorted
     .filter((value, index, self) => self.indexOf(value) === index)
     .map((item, i) => createTags(item, i));
 
@@ -117,7 +121,7 @@ const ProjectList = () => {
         className="project-list__input"
         onChange={(e) => setQuery(e.target.value)}
       />
-      <div className="project-list__tags">{globalTagsDisplay}</div>
+      <div className="project-list__tags">{projectListTagsDisplay}</div>
       <div className="project-list__list">{projects}</div>
     </div>
   );
