@@ -13,17 +13,9 @@
         $input__padding-x: 1rem;
         $input__width: 700px;
 
-        // @mixin inputWidth($iw) {}
-
-// @media (max-width: $md) {
-//     $input__width: 100px;
-//     background-color: red;
-// }
-
-
         &__input {
             display: flex;
-            width: $input__width;
+            // width: $input__width;
             height: 30px;
             margin: 0 auto 3rem;
             border-radius: 10px;
@@ -36,7 +28,8 @@
         &__tags {
             justify-content: center;
             margin: 0 auto 2rem;
-            width: calc($input__width + 2*$input__padding-x);
+            // @include inputWidth(700px, 1rem);
+            // width: calc($input__width + 2*$input__padding-x);
             overflow: auto;
             white-space: nowrap;
 
@@ -67,13 +60,32 @@
             }
         }
 
+        // Compute width of search bar and project-list__tags accounting for padding-x
+        @mixin inp($input__width) {
+            .project-list__input {
+                width: $input__width;
+            }
+
+            .project-list__tags {
+                width: calc($input__width + 2*$input__padding-x);
+            }
+        }
+
+        @include inp(700px);
+
+        @media (max-width: $md) {
+            @include inp(380px)
+        }
+
+        @media (max-width: $sm) {
+            @include inp(300px)
+        }
+
         &__list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-
-
     }
 
     &__card {
