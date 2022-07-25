@@ -13,21 +13,21 @@ const data: { title: string; content: any; tags: string[] }[] = [
       "AI",
       "Data Science",
       "API",
-      "a",
-      "b",
-      "c",
-      "d",
-      "e",
-      "f",
-      "g",
-      "h",
-      "i",
-      "j",
-      "k",
-      "l",
-      "m",
-      "n",
-      "o",
+      // "a",
+      // "b",
+      // "c",
+      // "d",
+      // "e",
+      // "f",
+      // "g",
+      // "h",
+      // "i",
+      // "j",
+      // "k",
+      // "l",
+      // "m",
+      // "n",
+      // "o",
     ],
   },
   {
@@ -56,15 +56,22 @@ const ProjectList = () => {
   };
 
   // Create a tag with consistent color accross project cards
-  const createTags = (tag: string, i: number) => {
+  const createTags = (
+    tag: string,
+    i: number,
+    isBackgroundColorPrimary: boolean = true
+  ) => {
     return (
-      <a
-        href=""
-        className="project__tag"
+      <button
+        className={`project__tag ${
+          isBackgroundColorPrimary
+            ? "project__tag--background-primary"
+            : "project__tag--background-secondary"
+        }`}
         style={{ backgroundColor: colorPalette[tag] }}
       >
         <span key={i}>{tag}</span>
-      </a>
+      </button>
     );
   };
 
@@ -103,7 +110,7 @@ const ProjectList = () => {
         <a key={i} href={`/#/projects/${i + 1}`} className="project__card">
           <h2>{item.title}</h2> <br />
           <div className="project__tags">
-            {item.tags.map((tag, i) => createTags(tag, i))}
+            {item.tags.map((tag, i) => createTags(tag, i, false))}
           </div>
           <div className="project__content">{item.content}</div>
         </a>
