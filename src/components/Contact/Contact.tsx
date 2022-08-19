@@ -10,7 +10,11 @@ const Contact = () => {
       <div className="contact__page__container">
         <h1 className="title">Contact</h1>
         <div className="cards__container">
-          <a href="https://github.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/jorislimonier"
+            target="_blank"
+            rel="noreferrer"
+          >
             <div className="card">
               <FaGithub size={28} />
               <p className="card__title">Github</p>
