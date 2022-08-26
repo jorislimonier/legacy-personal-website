@@ -3,4 +3,4 @@
 
 
 
-Currently redesigning my portfolio website with ReactJS.
+Improvement are possible, but the website is considered stable.
